@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"> 
+        <link rel="stylesheet"  href="{{ url_for('static', filename='styles/base.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/bee_icon.jpg') }}">
+        {% block link_css %} {% endblock %}
+        <title>OPG Knežević</title>
+        {{bootstrap.load_css()}}
+    </head>
+
+    <body>
+
+        <section class="nav-bar">
+
+            <nav class="navbar navbar-expand-lg navbar-light ">
+              <a class="navbar-brand" href="#">OPG KNEŽEVIĆ</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">POČETNA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('proizvodi') }}">PROIZVODI</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('cijenik') }}">CIJENIK</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('tečaj') }}">TEČAJ</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </section>
+
+         
+
+        {% block body %}
+
+        {% endblock %}
+
+      
+        <div class="footer">
+
+            <footer class="page-footer font-small teal pt-4">
+        
+              <!-- Footer Text -->
+              <div class="container-fluid text-center text-md-left">
+            
+                <!-- Grid row -->
+                <div class="row">
+            
+                  <!-- Grid column -->
+                  <div class="col-md-6 mt-md-0 mt-3">
+            
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold"> KONTAKT</h5>
+                    <p>E-mail: email@gmail.com</p>
+                    <p>TEL: 091 091 091 99</p>
+            
+                  </div>
+                  <!-- Grid column -->
+            
+                  <hr class="clearfix w-100 d-md-none pb-3">
+            
+                  <!-- Grid column -->
+                  <div class="col-md-6 mb-md-0 mb-3">
+            
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">LOKACIJA </h5>
+                    <p>Hrvatska</p>
+                    <p>Jasenice</p>
+            
+                  </div>
+                  <!-- Grid column -->
+            
+                </div>
+                <!-- Grid row -->
+            
+              </div>
+              <!-- Footer Text -->
+            
+              <!-- Copyright -->
+              <div class="footer-copyright text-center py-3">© 2020 Copyright: OPG Knežević
+                
+              </div>
+              <!-- Copyright -->
+            
+            </footer>
+          </div>
+        
+        
+        
+    </body>
+</html>

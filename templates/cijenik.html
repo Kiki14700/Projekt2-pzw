@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block link_css %} <link rel="stylesheet"  href="{{ url_for('static', filename='styles/cijenik.css') }}">{% endblock %}
+
+{% block body %}
+
+<div class="slika">
+  <img src="{{ url_for('static', filename='images/pozadina2.jpg') }}" class="img-fluid" alt="...">
+</div>
+
+<div class="tablica">  
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Proizvod</th>
+          <th scope="col">Količina</th>
+          <th scope="col">Cijena</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>MED (vrisak)</td>
+          <td>1000g</td>
+          <td>60kn</td>
+        </tr>
+        <th scope="row">2</th>
+          <td>MED (vrisak)</td>
+          <td>300g</td>
+          <td>30kn</td>
+        <tr>
+          <th scope="row">3</th>
+          <td>MED (livada)</td>
+          <td>1000g</td>
+          <td>50kn</td>
+        </tr>
+        <th scope="row">4</th>
+          <td>MED (livada)</td>
+          <td>300g</td>
+          <td>25kn</td>
+        <tr>
+          <th scope="row">5</th>
+          <td>MED (kadulja)</td>
+          <td>1000g</td>
+          <td>90kn</td>
+        </tr>
+        <tr>
+        <th scope="row">6</th>
+          <td>MED (kadulja)</td>
+          <td>300g</td>
+          <td>45kn</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>PROPOLIS (kapi)</td>
+          <td>20ml</td>
+          <td>50kn</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>MEDICA</td>
+          <td>1l</td>
+          <td>70kn</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+     <!-- OVO JE UBAČENO -->
+    
+
+{% endblock %}
